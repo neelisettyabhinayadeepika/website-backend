@@ -1,10 +1,12 @@
 exclude: |
   ^(
-    venv/|
-    node_modules/|
-    __pycache__/|
-    .pytest_cache/
+      venv/|
+      node_modules/|
+      __pycache__/|
+      \.pytest_cache/|
+      \.git/
   )
+
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.0

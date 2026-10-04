@@ -1,0 +1,9 @@
+$kind: http-request
+name: user- cart updated
+description: ""
+url: http://127.0.0.1:8000/cart/11
+method: PUT
+body:
+  type: json
+  content: "{\r\n  \"quantity\": 5\r\n}"
+order: 4498943893755484

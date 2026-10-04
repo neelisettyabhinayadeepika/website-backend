@@ -18,7 +18,6 @@ def get_products(db: Session = Depends(get_db)):
 # GET SINGLE PRODUCT
 @router.get("/{id}")
 def get_product(id: int, db: Session = Depends(get_db)):
-
     product = db.query(Product).filter(Product.id == id).first()
 
     if not product:
@@ -32,15 +31,14 @@ def get_product(id: int, db: Session = Depends(get_db)):
 def create_product(
     product: ProductSchema,
     db: Session = Depends(get_db),
-    current_user=Depends(role_required(["superadmin"]))
+    current_user=Depends(role_required(["superadmin"])),
 ):
-
     new_product = Product(
         title=product.title,
         price=product.price,
         description=product.description,
         image=product.image,
-        category=product.category
+        category=product.category,
     )
 
     db.add(new_product)
@@ -56,9 +54,8 @@ def update_product(
     id: int,
     product: ProductSchema,
     db: Session = Depends(get_db),
-    current_user=Depends(role_required(["superadmin"]))
+    current_user=Depends(role_required(["superadmin"])),
 ):
-
     db_product = db.query(Product).filter(Product.id == id).first()
 
     if not db_product:
@@ -75,14 +72,14 @@ def update_product(
 
     return db_product
 
+
 # DELETE PRODUCT (SUPER ADMIN ONLY)
 @router.delete("/{id}")
 def delete_product(
     id: int,
     db: Session = Depends(get_db),
-    current_user=Depends(role_required(["superadmin"]))
+    current_user=Depends(role_required(["superadmin"])),
 ):
-
     db_product = db.query(Product).filter(Product.id == id).first()
 
     if not db_product:
@@ -91,6 +88,4 @@ def delete_product(
     db.delete(db_product)
     db.commit()
 
-    return {
-        "message": "Product deleted successfully"
-    }
+    return {"message": "Product deleted successfully"}

@@ -1,0 +1,6 @@
+$kind: http-request
+name: superadmin- get verify
+description: ""
+url: http://127.0.0.1:8000/users/verify
+method: GET
+order: 4503278669458878

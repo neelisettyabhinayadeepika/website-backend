@@ -1,0 +1,15 @@
+$kind: http-request
+name: superadmin- post login
+description: ""
+url: http://127.0.0.1:8000/users/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"admin@gmail.com\",\r
+
+    \  \"password\": \"admin123\"\r
+
+    }"
+order: 4503058854145898

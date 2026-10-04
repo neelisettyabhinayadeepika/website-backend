@@ -1,6 +1,7 @@
-from sqlalchemy import Column, Integer, String, Float,JSON
+from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
 from app.core.database import Base
+
 
 class Product(Base):
     __tablename__ = "products"
@@ -11,6 +12,5 @@ class Product(Base):
     description = Column(String)
     image = Column(String)
     category = Column(String)
-
 
     carts = relationship("Cart", back_populates="product")

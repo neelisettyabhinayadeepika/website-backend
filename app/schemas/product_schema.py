@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from typing import List
 
 
 class ProductSchema(BaseModel):
@@ -8,5 +7,3 @@ class ProductSchema(BaseModel):
     description: str
     image: str
     category: str
-
-  

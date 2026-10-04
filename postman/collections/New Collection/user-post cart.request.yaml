@@ -1,0 +1,15 @@
+$kind: http-request
+name: user-post cart
+description: ""
+url: http://127.0.0.1:8000/cart
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"product_id\": 2,\r
+
+    \  \"quantity\": 4\r
+
+    }"
+order: 4469318604151880

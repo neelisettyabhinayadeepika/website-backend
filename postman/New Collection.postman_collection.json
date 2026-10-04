@@ -1,0 +1,420 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000001",
+      "name": "user-post register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/register",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "register"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"Deepika\",\n  \"email\": \"deepika@gmail.com\",\n  \"password\": \"deepika123\",\n  \"role\": \"user\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000002",
+      "name": "user-post login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/login",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "login"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"deepika@gmail.com\",\n  \"password\": \"deepika123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000003",
+      "name": "user-get user verify",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/verify",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "verify"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000004",
+      "name": "user-get users/me",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/me",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "me"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000011",
+      "name": "user-put users/edit profile",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/editprofile",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "editprofile"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"deepika_Neelisetty\",\n  \"email\": \"deepika@gmail.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000005",
+      "name": "user-get products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/products",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["products"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000006",
+      "name": "user-get single products/2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/products/2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["products", "2"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000007",
+      "name": "user-post cart",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cart",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["cart"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product_id\": 2,\n  \"quantity\": 4\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000008",
+      "name": "user-get cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cart",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["cart"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000010",
+      "name": "user- cart updated",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cart/11",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["cart", "11"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantity\": 6\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000009",
+      "name": "user-delete cart",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cart/10",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["cart", "10"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000012",
+      "name": "superadmin-post register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/register",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "register"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"admin\",\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"admin123\",\n  \"role\": \"superadmin\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000013",
+      "name": "superadmin- post login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/login",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "login"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"admin123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000014",
+      "name": "superadmin- get verify",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/verify",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "verify"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000015",
+      "name": "superadmin-get me",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/me",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "me"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000016",
+      "name": "superadmin-get all users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000017",
+      "name": "superadmin get all products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/products",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["products"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000018",
+      "name": "superadmin-post product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/products",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["products"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"lenovo Laptop\",\n  \"price\": 59999,\n  \"description\": \"16GB RAM, 512GB SSD\",\n  \"category\": \"electronics\",\n  \"image\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000019",
+      "name": "superadmin-post update product",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/products/2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["products", "2"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Dell Laptop Updated\",\n  \"price\": 62999,\n  \"description\": \"16GB RAM, 1TB SSD\",\n  \"category\": \"electronics\",\n  \"image\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000020",
+      "name": "superadmin-delete product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/products/5",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["products", "5"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000021",
+      "name": "superadmin-get single user",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "1"]
+        }
+      }
+    },
+    {
+      "id": "11111111-aaaa-bbbb-cccc-000000000022",
+      "name": "superadmin-delete user",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/users/4",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["users", "4"]
+        }
+      }
+    }
+  ]
+}

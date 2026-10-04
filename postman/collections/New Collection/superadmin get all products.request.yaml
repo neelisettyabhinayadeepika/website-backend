@@ -1,0 +1,6 @@
+$kind: http-request
+name: superadmin get all products
+description: ""
+url: http://127.0.0.1:8000/products
+method: GET
+order: 4503571084015233

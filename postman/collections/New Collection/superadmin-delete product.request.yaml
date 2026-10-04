@@ -1,0 +1,6 @@
+$kind: http-request
+name: superadmin-delete product
+description: ""
+url: http://127.0.0.1:8000/products/5
+method: DELETE
+order: 4503599121158251

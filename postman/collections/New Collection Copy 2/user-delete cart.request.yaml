@@ -1,0 +1,6 @@
+$kind: http-request
+name: user-delete cart
+description: ""
+url: http://127.0.0.1:8000/cart/10
+method: DELETE
+order: 4501890035694556

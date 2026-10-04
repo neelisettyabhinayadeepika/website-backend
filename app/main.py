@@ -9,6 +9,9 @@ from app.routers.task_router import router as task_router
 from app.routers.user_router import router as user_router
 from app.routers.product import router as product_router
 from app.routers.cart import router as cart_router
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ⚠️ Move this later in production (important)
 Base.metadata.create_all(bind=engine)
@@ -21,9 +24,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000"
-    ],
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -55,13 +56,9 @@ def chrome_devtools():
     return JSONResponse({"status": "ok"})
 
 
-from fastapi import Response
-
 @app.post("/logout")
 def logout(response: Response):
     response.delete_cookie("access_token", path="/")
     response.delete_cookie("refresh_token", path="/")
 
-    return {
-        "message": "Logged out successfully"
-    }
+    return {"message": "Logged out successfully"}

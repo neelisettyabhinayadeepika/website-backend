@@ -8,20 +8,11 @@ from middleware.jwt import create_token
 
 router = APIRouter()
 
-pwd = CryptContext(
-    schemes=["bcrypt"],
-    deprecated="auto"
-)
+pwd = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 @router.post("/login")
-def login(
-    email: str,
-    password: str,
-    response: Response,
-    db: Session = Depends(get_db)
-):
-
+def login(email: str, password: str, response: Response, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == email).first()
 
     if not user:
@@ -30,22 +21,20 @@ def login(
     if not pwd.verify(password, user.password):
         raise HTTPException(400, "Wrong password")
 
-    # ✅ ADD ROLE HERE
-    token = create_token({
-        "user_id": user.id,
-        "email": user.email,
-        "role": user.role   # 🔥 added role
-    })
+    
+    token = create_token(
+        {
+            "user_id": user.id,
+            "email": user.email,
+            "role": user.role, 
+        }
+    )
 
     response.set_cookie(
-        key="access_token",
-        value=token,
-        httponly=True,
-        samesite="Lax",
-        secure=False
+        key="access_token", value=token, httponly=True, samesite="Lax", secure=False
     )
 
     return {
         "message": "Login successful",
-        "role": user.role   # optional but useful for frontend
+        "role": user.role,  
     }
